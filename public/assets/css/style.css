@@ -1,0 +1,165 @@
+/* ===========================
+   Reset و فونت مدرن
+=========================== */
+body {
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f6fa;
+  margin: 0;
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+.sidebar {
+  width: 220px;
+  background-color: #1f2937;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.sidebar a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.sidebar .sidebar-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar .sidebar-link:hover,
+.sidebar .nav-item.open > .sidebar-link {
+  background-color: #374151;
+  color: #fff;
+}
+
+.sidebar .sidebar-sublink {
+  display: block;
+  padding: 0.4rem 1.5rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar .sidebar-sublink:hover {
+  background-color: #4b5563;
+  color: #fff;
+}
+
+/* Submenu */
+.submenu {
+  display: none;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+.nav-item.open > .submenu {
+  display: flex;
+}
+
+/* Chevron rotation */
+.nav-item.has-submenu > .sidebar-link i.bi-chevron-down {
+  transition: transform 0.3s;
+}
+
+.nav-item.open > .sidebar-link i.bi-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* ===========================
+   Main content
+=========================== */
+.main {
+  flex-grow: 1;
+  min-height: 100vh;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   Topbar
+=========================== */
+.navbar {
+  background-color: #fff !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 0.5rem 1rem;
+}
+
+.navbar .navbar-brand {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.navbar .dropdown-toggle::after {
+  display: none;
+}
+
+/* Welcome text */
+.navbar .welcome-text {
+  margin-right: 1rem;
+  font-weight: 500;
+  color: #6c757d;
+   display: none !important;
+}
+
+/* ===========================
+   Cards
+=========================== */
+.card-modern {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+.card-modern:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* ===========================
+   Tables
+=========================== */
+.table {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: #f1f3f5;
+}
+
+.table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* ===========================
+   Responsive adjustments
+=========================== */
+@media (max-width: 991px) {
+  .sidebar {
+    position: fixed;
+    left: -240px;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    z-index: 1050;
+    transition: left 0.3s;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+}
