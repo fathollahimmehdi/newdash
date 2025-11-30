@@ -2,20 +2,7 @@
 <!-- ============================================================== -->
                 <!-- Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
-                <div class="row page-titles">
-                    <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Dashboard 1</h4>
-                    </div>
-                    <div class="col-md-7 align-self-center text-right">
-                        <div class="d-flex justify-content-end align-items-center">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Dashboard 1</li>
-                            </ol>
-                            <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
-                        </div>
-                    </div>
-                </div>
+                 <?php include 'src/views/layouts/title_breadcrumb.php'; ?>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
@@ -154,7 +141,7 @@
                                             <div class="col-6 m-t-40">
                                                 <h3>&nbsp;</h3>
                                                 <div class="display-4">73<sup>°F</sup></div>
-                                                <p class="text-white">AHMEDABAD, INDIA</p>
+                                                <p class="text-white">Tehran, Iran</p>
                                             </div>
                                             <div class="col-6 text-right">
                                                 <h1 class="m-b-"><i class="wi wi-day-cloudy-high"></i></h1>
@@ -173,7 +160,7 @@
                                             <!-- Carousel items -->
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
-                                                    <h4 class="cmin-height">My Acting blown <span class="font-medium">Your Mind</span> and you also <br/>laugh at the moment</h4>
+                                                    <h4 class="cmin-height"><?php echo $this->getShortQuote(14); ?></h4>
                                                     <div class="d-flex no-block">
                                                         <span><img src="../assets/images/users/1.jpg" alt="user" width="50" class="img-circle"></span>
                                                         <span class="m-l-10">
